@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+#container {
+  display: flex;
+  gap: 20px;
+}
+
+#category-list {
+  width: 20%;
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+}
+
+#books-list {
+  width: 80%;
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+}
+
+#book-details {
+  width: 100%;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card .card-title {
+  margin-bottom: 10px;
+}
+
+.card .card-text {
+  color: #666;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: black;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.d-block {
+  display: block;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+
+#buying-process {
+  display: none;
+}
