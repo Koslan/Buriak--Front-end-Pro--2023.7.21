@@ -2,7 +2,7 @@ function formatTime(number) {
   return number < 10 ? '0' + number : number;
 }
 
-var countDownDate = new Date("Jul 22, 2023 12:00:00").getTime();
+var countDownDate = new Date("Jul 23, 2023 12:00:00").getTime();
 
 var countdownFunction = setInterval(function() {
 
