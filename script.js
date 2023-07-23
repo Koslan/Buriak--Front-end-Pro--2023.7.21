@@ -235,6 +235,7 @@ function renderView(viewMode, data) {
           <p class="card-text">Price: $${order.price}</p>
           <p class="card-text">BookName: ${order.bookTitle}</p>
           <button class="btn btn-danger" onclick="deleteOrder(${order.id})">Delete</button>
+          
         </div>
       `;
       booksList.appendChild(card);
