@@ -4,19 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Таймер до завантаження дз</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Книжковий магазин</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col text-center">
-                <h1 id="countdown" style="height: 100px;"></h1>
-            </div>
+    <header class="bg-primary text-white p-4">
+        <h1>Книжковий магазин</h1>
+    </header>
+    <main class="container my-4">
+        <div class="row">
+            <aside class="col-md-3">
+                <h2>Категорії</h2>
+                <div id="category-list">
+                    <!-- Categories will be populated here -->
+                </div>
+                <!-- Add the following button for "My Orders" -->
+                <button id="my-orders-button" class="btn btn-primary">Мої замовлення</button>
+            </aside>
+            <section class="col-md-6">
+                <h2 id="middleSectionH2">Список книг</h2>
+                <div class="row" id="books-list">
+                    <!-- Books will be populated here -->
+                </div>
+                <nav>
+                    <ul class="pagination justify-content-center">
+                        <!-- Pagination buttons will be populated here -->
+                    </ul>
+                </nav>
+            </section>
+            <aside class="col-md-3">
+                <h2>Деталі книги</h2>
+                <div id="book-details">
+                    <!-- Book details will be displayed here -->
+                </div>
+
+                <div id="buying-process" style="display: none;">
+                    <h2>Купити книгу</h2>
+                    <div id="buying-order">
+                        <h5 id="book-to-buy"></h5>
+                        <form id="buying-form">
+                            <div>
+                                <label for="customer-name">Ім'я:</label><br />
+                                <input id="customer-name" type="text" required />
+                            </div>
+
+                            <div>
+                                <label for="city">Місто:</label><br />
+                                <select id="city" required>
+                                    <option value="">--Оберіть Місто--</option>
+                                    <option value="Kyiv">Київ</option>
+                                    <option value="Lviv">Львів</option>
+                                    <option value="Odesa">Одеса</option>
+                                    <option value="Dnipro">Дніпро</option>
+                                    <option value="Kharkiv">Харків</option>
+                                    <option value="Chernivtsi">Чернівці</option>
+                                    <option value="Zaporizhzhia">Запоріжя</option>
+                                    <option value="Ivano-Frankivsk">Івано-Франківськ</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="post-office">Поштовий офіс:</label><br />
+                                <select id="post-office" required></select>
+                            </div>
+
+                            <div>
+                                <label for="payment">Оплата:</label><br />
+                                <select id="payment" required>
+                                    <option value="cod">Оплата при доставці</option>
+                                    <option value="card">Картка</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="quantity">Кількість:</label><br />
+                                <input id="quantity" type="number" min="1" value="1" required />
+                            </div>
+
+                            <div>
+                                <label for="comment">Коментарі для доставки:</label><br />
+                                <textarea id="comment"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-success">Підтвердити</button>
+                        </form>
+                        <div id="order-error" style="color: red;"></div>
+                        <div id="order-confirmation"></div>
+                    </div>
+                </div>
+
+
+            </aside>
         </div>
-    </div>
+    </main>
+    <footer class="bg-dark text-white p-4">
+        <p>&copy; 2023 Книжковий магазин</p>
+    </footer>
 
     <!-- Add Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
