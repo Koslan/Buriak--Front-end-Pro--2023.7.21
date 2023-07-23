@@ -187,16 +187,6 @@ function displayOrdersList() {
   renderView("orders", orders);
 }
 
-// Step 4: Expand Order Details
-function displayOrderDetails(order) {
-  const detailsDiv = document.querySelector('#order-details');
-  detailsDiv.innerHTML = `
-    <h3>Order Details</h3>
-    <p>Date: ${order.date}</p>
-    <p>Price: ${order.price}</p>
-    <button class="btn btn-danger" onclick="deleteOrder(${order.id})">Delete</button>
-  `;
-}
 
 // Step 5: Enable Order Deletion
 function deleteOrder(orderId) {
@@ -244,6 +234,7 @@ function renderView(viewMode, data) {
           <p class="card-text">Date: ${order.date}</p>
           <p class="card-text">Price: $${order.price}</p>
           <p class="card-text">BookName: ${order.bookTitle}</p>
+          <button class="btn btn-danger" onclick="deleteOrder(${order.id})">Delete</button>
         </div>
       `;
       booksList.appendChild(card);
